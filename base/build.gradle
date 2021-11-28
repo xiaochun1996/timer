@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -7,13 +7,11 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.jock.jframe"
         minSdk 21
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -32,33 +30,16 @@ android {
     viewBinding {
         enabled = true
     }
-
-    sourceSets {
-        main {
-            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
-            jniLibs.srcDirs = ['libs']
-            res.srcDirs = ['src/main/res']
-            java {
-                srcDirs = ['src/main/java']
-//                exclude '/com.xiaozhu.xzdz.debug/'  // 不想包含文件的路径
-            }
-        }
-        debug {
-            java.srcDirs = ['src/main/java', 'build/generated/data_binding_base_class_source_out/debug/out']
-        }
-        release {
-            java.srcDirs = ['src/main/java', 'build/generated/data_binding_base_class_source_out/release/out']
-        }
-    }
-
 }
 
 dependencies {
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation project(path: ':base')
+    // 使依赖库可以调用
+    api project(path: ':kutils')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
