@@ -2,7 +2,6 @@ package com.jock.jframe.jetpack.viewbinding
 
 import com.jock.base.activity.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
-import com.jock.jframe.databinding.JetpackActivityViewbindingActivityDemoBinding
 import com.jock.jframe.databinding.JetpackActivityViewbindingCustomViewDemoBinding
 import com.jock.jframe.databinding.LayoutViewbindingCustomViewBinding
 
@@ -14,7 +13,7 @@ import com.jock.jframe.databinding.LayoutViewbindingCustomViewBinding
 class ViewBindingCustomViewActivity :
     BaseActivity<JetpackActivityViewbindingCustomViewDemoBinding>() {
 
-    override fun initView() {
+    override fun initView(mBinding: JetpackActivityViewbindingCustomViewDemoBinding) {
         mBinding.itemOne.bindView(ChapterBean("我是标题一","我是副标题一","我是内容一"))
         mBinding.itemTwo.bindView(ChapterBean("我是标题二","我是副标题二","我是内容二"))
         mBinding.itemThree.bindView(ChapterBean("我是标题三","我是副标题三","我是内容三"))

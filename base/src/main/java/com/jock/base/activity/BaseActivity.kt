@@ -1,7 +1,6 @@
 package com.jock.base.activity
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.jock.base.jetpack.ActivityBinding
@@ -12,7 +11,7 @@ import com.jock.base.jetpack.FragmentBinding
  * Author: lxc
  * Date: 2021/11/28 12:31
  */
-abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ActivityTemplate {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ActivityTemplate<VB> {
 
     protected lateinit var mBinding: VB
 
@@ -22,7 +21,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ActivityTem
         // ViewBinding 绑定
         mBinding = viewBinding().invoke(layoutInflater) as VB
         setContentView(mBinding.root)
-        initView()
+        initView(mBinding)
     }
 
 
@@ -31,12 +30,12 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ActivityTem
 /**
  * Fragment 和 Activity 共有方法接口
  */
-interface Template {
+interface Template<VB> {
 
     /**
      * 初始化 View
      */
-    fun initView()
+    fun initView(mBinding: VB)
 
     /**
      * 初始化数据源
@@ -56,7 +55,7 @@ interface Template {
 /**
  * Activity 特有抽象方法接口
  */
-interface ActivityTemplate : Template {
+interface ActivityTemplate<VB> : Template<VB> {
     /**
      * ViewBinding 绑定
      */
@@ -66,7 +65,7 @@ interface ActivityTemplate : Template {
 /**
  * Fragment 特有抽象方法接口
  */
-interface FragmentTemplate : Template {
+interface FragmentTemplate<VB> : Template<VB> {
     /**
      * ViewBinding 绑定
      */

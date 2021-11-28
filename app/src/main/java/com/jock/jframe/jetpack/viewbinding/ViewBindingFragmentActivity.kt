@@ -1,6 +1,5 @@
 package com.jock.jframe.jetpack.viewbinding
 
-import androidx.databinding.DataBindingUtil.getBinding
 import com.jock.base.activity.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.jframe.databinding.JetpackActivityViewbindingFragmentDemoBinding
@@ -12,7 +11,7 @@ import com.jock.jframe.databinding.JetpackActivityViewbindingFragmentDemoBinding
  */
 class ViewBindingFragmentActivity: BaseActivity<JetpackActivityViewbindingFragmentDemoBinding>() {
 
-    override fun initView() {
+    override fun initView(mBinding: JetpackActivityViewbindingFragmentDemoBinding) {
 
     }
 

@@ -15,13 +15,13 @@ class HomeActivity : BaseActivity<ActivityMainBinding>() {
         return ActivityMainBinding::inflate
     }
 
-    override fun initView() {
+    override fun initView(mBinding: ActivityMainBinding) {
         mBinding.tvContent.text = "进入 demo"
         mBinding.tvContent.setOnClickListener {
-//            val map = HashMap<String, Any?>()
+            val map = HashMap<String, Any?>()
+            map["menu"] = viewBindingMenu()
 //            map["menu"] = initMenu().child
-//            startActivity<MenuActivity>(map)
-            startActivity<ViewBindingCustomViewActivity>()
+            startActivity<MenuActivity>(map)
         }
     }
 

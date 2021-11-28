@@ -11,7 +11,7 @@ import com.jock.jframe.databinding.JetpackActivityViewbindingActivityDemoBinding
  */
 class ViewBindingActivity: BaseActivity<JetpackActivityViewbindingActivityDemoBinding>() {
 
-    override fun initView() {
+    override fun initView(mBinding: JetpackActivityViewbindingActivityDemoBinding) {
         mBinding.tvContent.text = "Hello ViewBinding!"
     }
 

@@ -10,8 +10,8 @@ import com.jock.jframe.databinding.JetpackActivityViewbindingActivityDemoBinding
  * Date: 2021/11/28 16:06
  */
 class ViewBindingFragment: BaseFragment<JetpackActivityViewbindingActivityDemoBinding>() {
-    override fun initView() {
-        getBinding().tvContent.text = "Hello ViewBinding Fragment!"
+    override fun initView(mBinding: JetpackActivityViewbindingActivityDemoBinding) {
+        mBinding.tvContent.text = "Hello ViewBinding Fragment!"
     }
 
     override fun viewBinding(): FragmentBinding {

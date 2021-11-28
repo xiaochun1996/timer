@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.jock.base.jetpack.FragmentBinding
 import java.lang.Exception
 
 /**
@@ -14,9 +13,9 @@ import java.lang.Exception
  * Author: lxc
  * Date: 2021/11/28 12:43
  */
-abstract class BaseFragment<T: ViewBinding>:Fragment(),FragmentTemplate{
+abstract class BaseFragment<VB: ViewBinding>:Fragment(),FragmentTemplate<VB>{
 
-    private var mBinding: T?=null
+    private var mBinding: VB?=null
 
     @Suppress("UNCHECKED_CAST")
     override fun onCreateView(
@@ -24,21 +23,21 @@ abstract class BaseFragment<T: ViewBinding>:Fragment(),FragmentTemplate{
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = viewBinding().invoke(inflater,container,false) as T
+        mBinding = viewBinding().invoke(inflater,container,false) as VB
         return mBinding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mBinding?.let{
-            initView()
+            initView(it)
         }
     }
 
     /**
      * 获取 ViewBinding
      */
-    fun getBinding(): T {
+    fun getBinding(): VB {
         if(mBinding==null){
             throw Exception("ViewBinding is Null.")
         }

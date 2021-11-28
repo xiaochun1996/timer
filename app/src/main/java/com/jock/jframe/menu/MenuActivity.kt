@@ -7,6 +7,7 @@ import com.jock.base.activity.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.jframe.bean.MenuEntity
 import com.jock.jframe.databinding.ActivityCommonListBinding
+import com.jock.jframe.databinding.ActivityMainBinding
 import com.jock.kutils.getSerializableListExtra
 import com.jock.kutils.startActivity
 
@@ -17,7 +18,7 @@ import com.jock.kutils.startActivity
  */
 class MenuActivity: BaseActivity<ActivityCommonListBinding>() {
 
-    override fun initView() {
+    override fun initView(mBinding: ActivityCommonListBinding) {
         val menuList = getSerializableListExtra<MenuEntity>("menu")
         val container = mBinding.rvContainer
         val adapter = MenuAdapter()
