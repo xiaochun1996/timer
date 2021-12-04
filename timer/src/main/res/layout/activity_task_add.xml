@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/main_activity_bottom_button"
+            android:text="标签" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/main_activity_bottom_button"
+            android:text="类别" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_event"
+            android:layout_height="wrap_content"
+            style="@style/single_padding_15_10_weight"
+            android:gravity="end|center_vertical"
+            android:textSize="16sp"
+            tools:text="自定义事件自定义事件自定义事件自定义事件" />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

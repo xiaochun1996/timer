@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp">
+
+    <EditText
+        android:id="@+id/et_tag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/single_padding_15_10"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        style="@style/single_padding_15_10_weight"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="种类"/>
+
+</LinearLayout>

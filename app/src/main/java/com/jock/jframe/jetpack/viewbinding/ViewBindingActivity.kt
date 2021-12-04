@@ -1,6 +1,6 @@
 package com.jock.jframe.jetpack.viewbinding
 
-import com.jock.base.activity.BaseActivity
+import com.jock.jframe.jetpack.viewbinding.base.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.jframe.databinding.JetpackActivityViewbindingActivityDemoBinding
 

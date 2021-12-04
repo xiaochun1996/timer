@@ -1,6 +1,6 @@
 package com.jock.jframe.jetpack.viewbinding.fragment
 
-import com.jock.base.activity.BaseFragment
+import com.jock.jframe.jetpack.viewbinding.base.BaseFragment
 import com.jock.base.jetpack.FragmentBinding
 import com.jock.jframe.databinding.JetpackActivityViewbindingActivityDemoBinding
 

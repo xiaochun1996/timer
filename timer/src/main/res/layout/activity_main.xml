@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jock.timer.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_previous"
+        style="@style/padding_15_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上一条"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:padding="8dp"
+                android:id="@+id/tv_pro_start_time"
+                style="@style/edit_time_select"
+                android:hint="开始时间"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "/>
+
+            <TextView
+                android:padding="8dp"
+                android:id="@+id/tv_pro_end_time"
+                style="@style/edit_time_select"
+                android:hint="结束时间"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/tv_pro_event"
+                android:layout_height="wrap_content"
+                style="@style/single_padding_15_10_weight"
+                android:gravity="end|center_vertical"
+                android:textSize="16sp"
+                tools:text="自定义事件自定义事件自定义事件自定义事件" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_insert"
+            style="@style/main_activity_bottom_button"
+            android:text="补全" />
+
+        <TextView
+            android:id="@+id/tv_add_task"
+            style="@style/main_activity_bottom_button"
+            android:text="添加任务" />
+
+        <TextView
+            android:id="@+id/tv_time_diagram"
+            style="@style/main_activity_bottom_button"
+            android:text="日视图" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_task_label"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="8dp"
+            android:id="@+id/tv_start_time"
+            style="@style/edit_time_select"
+            android:hint="开始时间"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "/>
+
+        <TextView
+            android:padding="8dp"
+            android:id="@+id/tv_end_time"
+            style="@style/edit_time_select"
+            android:hint="结束时间"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/tv_event"
+            android:layout_height="wrap_content"
+            style="@style/single_padding_15_10_weight"
+            android:gravity="end|center_vertical"
+            android:textSize="16sp"
+            tools:text="自定义事件自定义事件自定义事件自定义事件" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_habit"
+            style="@style/main_activity_bottom_button"
+            android:text="习惯" />
+
+        <TextView
+            android:id="@+id/tv_today"
+            style="@style/main_activity_bottom_button"
+            android:text="今日" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            style="@style/main_activity_bottom_button"
+            android:text="添加" />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

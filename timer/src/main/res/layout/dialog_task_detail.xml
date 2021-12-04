@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp">
+
+    <EditText
+        android:id="@+id/et_task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/single_padding_15_10"
+        android:importantForAutofill="no" />
+    
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/tv_tag"
+               style="@style/single_padding_15_10_weight"
+               android:layout_height="wrap_content"
+               android:text="标签"/>
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/single_padding_15_10_weight"
+                android:layout_height="wrap_content"
+                android:text="种类"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_start_time"
+            style="@style/single_padding_15_10_weight"
+            android:layout_height="wrap_content"
+            android:text="开始时间"/>
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/single_padding_15_10_weight"
+            android:layout_height="wrap_content"
+            android:text="结束时间"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

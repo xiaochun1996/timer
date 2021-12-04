@@ -12,4 +12,6 @@ import androidx.viewbinding.ViewBinding
 
 typealias ActivityBinding = (LayoutInflater) -> ViewBinding
 
+typealias DialogBinding = (LayoutInflater) -> ViewBinding
+
 typealias FragmentBinding = (LayoutInflater, ViewGroup?, Boolean) -> ViewBinding

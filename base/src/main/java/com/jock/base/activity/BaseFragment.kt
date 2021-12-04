@@ -13,7 +13,7 @@ import java.lang.Exception
  * Author: lxc
  * Date: 2021/11/28 12:43
  */
-abstract class BaseFragment<VB: ViewBinding>:Fragment(),FragmentTemplate<VB>{
+abstract class BaseFragment<VB: ViewBinding>:Fragment(), FragmentTemplate<VB> {
 
     private var mBinding: VB?=null
 
@@ -30,7 +30,7 @@ abstract class BaseFragment<VB: ViewBinding>:Fragment(),FragmentTemplate<VB>{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mBinding?.let{
-            initView(it)
+           it.initView()
         }
     }
 

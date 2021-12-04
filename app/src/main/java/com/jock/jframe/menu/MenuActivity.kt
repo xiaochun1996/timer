@@ -3,11 +3,10 @@ package com.jock.jframe.menu
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jock.base.activity.BaseActivity
+import com.jock.jframe.jetpack.viewbinding.base.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.jframe.bean.MenuEntity
 import com.jock.jframe.databinding.ActivityCommonListBinding
-import com.jock.jframe.databinding.ActivityMainBinding
 import com.jock.kutils.getSerializableListExtra
 import com.jock.kutils.startActivity
 
@@ -21,8 +20,8 @@ class MenuActivity: BaseActivity<ActivityCommonListBinding>() {
     override fun initView(mBinding: ActivityCommonListBinding) {
         val menuList = getSerializableListExtra<MenuEntity>("menu")
         val container = mBinding.rvContainer
-        val adapter = MenuAdapter()
-        adapter.setOnItemClickListener { adapter, view, position ->
+        val menuAdapter = MenuAdapter()
+        menuAdapter.setOnItemClickListener { adapter, _, position ->
             val menu = adapter.data[position] as MenuEntity
             if(menu.page){
                 val intent =  Intent(this, menu.path)
@@ -34,8 +33,8 @@ class MenuActivity: BaseActivity<ActivityCommonListBinding>() {
             }
         }
         container.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL,false)
-        container.adapter = adapter
-        adapter.setNewInstance(menuList.toMutableList())
+        container.adapter = menuAdapter
+        menuAdapter.setNewInstance(menuList.toMutableList())
     }
 
     override fun viewBinding(): ActivityBinding {

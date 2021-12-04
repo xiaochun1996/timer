@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2234375" />
+        <entry key="../../.gradle/caches/transforms-3/34d368ae4688073800b5f04b06f87729/transformed/datepicker-1/res/layout/wcy_date_picker_view.xml" value="0.3159469858914066" />
+        <entry key="../../.gradle/caches/transforms-3/34d368ae4688073800b5f04b06f87729/transformed/datepicker-1/res/layout/wcy_dialog_date_picker.xml" value="0.2511332728921124" />
+        <entry key="app/src/main/res/layout/activity_common_list.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33967391304347827" />
+        <entry key="app/src/main/res/layout/adapter_item_menu.xml" value="0.18110435663627153" />
+        <entry key="app/src/main/res/layout/jetpack_activity_viewbinding_activity_demo.xml" value="0.3342391304347826" />
+        <entry key="app/src/main/res/layout/jetpack_activity_viewbinding_custom_view_demo.xml" value="0.33061594202898553" />
+        <entry key="app/src/main/res/layout/jetpack_activity_viewbinding_fragment_demo.xml" value="0.3342391304347826" />
+        <entry key="app/src/main/res/layout/layout_viewbinding_custom_view.xml" value="0.25" />
+        <entry key="timer/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="timer/src/main/res/layout/activity_task_add.xml" value="0.2932910244786945" />
+        <entry key="timer/src/main/res/layout/activity_today.xml" value="0.15440869201838697" />
+        <entry key="timer/src/main/res/layout/dialog_label_layout.xml" value="0.3159469858914066" />
+        <entry key="timer/src/main/res/layout/dialog_tag_all.xml" value="0.335" />
+        <entry key="timer/src/main/res/layout/dialog_tag_detail.xml" value="0.2932910244786945" />
+        <entry key="timer/src/main/res/layout/dialog_task_detail.xml" value="0.1" />
+        <entry key="timer/src/main/res/layout/room_activity_test_operation.xml" value="0.25339981867633726" />
+        <entry key="timer/src/main/res/layout/room_adapter_item.xml" value="0.25339981867633726" />
+        <entry key="timer/src/main/res/layout/room_adapter_recorder.xml" value="0.2991840435176791" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="true" project-jdk-name="14" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

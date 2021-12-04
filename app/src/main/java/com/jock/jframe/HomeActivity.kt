@@ -1,6 +1,6 @@
 package com.jock.jframe
 
-import com.jock.base.activity.BaseActivity
+import com.jock.jframe.jetpack.viewbinding.base.BaseActivity
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.jframe.bean.MenuEntity
 import com.jock.jframe.databinding.ActivityMainBinding

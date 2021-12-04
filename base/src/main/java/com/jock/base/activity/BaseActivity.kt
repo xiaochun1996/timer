@@ -1,10 +1,12 @@
 package com.jock.base.activity
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.jock.base.jetpack.ActivityBinding
 import com.jock.base.jetpack.FragmentBinding
+import java.security.AccessController.getContext
 
 /**
  * Description: Activity 基类
@@ -21,10 +23,11 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), ActivityTem
         // ViewBinding 绑定
         mBinding = viewBinding().invoke(layoutInflater) as VB
         setContentView(mBinding.root)
-        initView(mBinding)
+        mBinding.initView()
     }
 
-
+    val mContext: Context
+        get() = this
 }
 
 /**
@@ -35,7 +38,7 @@ interface Template<VB> {
     /**
      * 初始化 View
      */
-    fun initView(mBinding: VB)
+    fun VB.initView()
 
     /**
      * 初始化数据源
